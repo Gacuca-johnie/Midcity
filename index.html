@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Midcity Movers | Home</title>
+  <link rel="stylesheet" href="midcity.css">
+</head>
+<body>
+    <!-- jQuery Library -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Custom jQuery Script -->
+<script>
+  $(document).ready(function () {
+    // Highlight the navigation menu item on click
+    $("nav ul li a").click(function () {
+      $("nav ul li a").removeClass("active");
+      $(this).addClass("active");
+    });
+
+    // Smooth scroll to section (if applicable)
+    $("nav ul li a").on('click', function (e) {
+      if (this.hash !== "") {
+        e.preventDefault();
+        const hash = this.hash;
+        $('html, body').animate(
+          {
+            scrollTop: $(hash).offset().top
+          },
+          800
+        );
+      }
+    });
+
+    // Animate heading color on hover
+    $("header h1").hover(
+      function () {
+        $(this).css("color", "#d62828");
+      },
+      function () {
+        $(this).css("color", "#333");
+      }
+    );
+
+    // Show alert on form submission
+    $("form").on("submit", function (e) {
+      e.preventDefault();
+      alert("Thank you! Your message has been submitted.");
+    });
+  });
+</script>
+
+  <header>
+    <h1>Midcity Movers</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Our Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Welcome to Midcity Movers</h2>
+    <p>Your trusted partner for safe and reliable moving solutions.</p>
+    <img src="C:\Users\Hp\OneDrive\Documents\Midcity Movers\mid\a.JPG" alt="Moving Truck">
+  </section>
+
+  <section>
+    <h2>Why Choose Us?</h2>
+    <p>Midcity Movers stands out with our reliable services, experienced staff, and a customer-first approach. Whether it's a local or long-distance move, we ensure your belongings are handled with care.</p>
+  </section>
+<div class="nav-buttons">
+  <a href="about.html" class="btn-nav">About Us</a>
+</div>
+
+  <footer>
+    <p>&copy; 2025 Midcity Movers. All rights reserved.</p>
+  </footer>
+</body>
+</html>
